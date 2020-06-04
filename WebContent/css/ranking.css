@@ -1,0 +1,41 @@
+body{background:#FF8956}
+
+@charset "utf-8";
+.common-header { position: relative;}
+.wrap{padding-top:80px; background:#FF8956}
+.ranking_title{position:relative; margin-top:50px; margin-bottom:15px;color:white; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 70px; line-height: 95px; text-align: center;}
+.table_list {position: relative; width: 800px; margin:0 auto;padding-top: 7px; margin-bottom:80px; background:white; border-radius:1%;}
+.table_list table {position: relative;width: 100%;}
+.table_list th {height: 68px;font-size: 16px;color:#333;border-bottom:2px solid #dedede;font-weight: normal}
+.table_list th.col1 {width:138px;}
+.table_list th.col2 {width: 120px;}
+.table_list th.col3 {padding-left: 47px;text-align: left;}
+.table_list th.col4, .table_list th.col5, .table_list th.col6,
+.table_list th.col7, .table_list th.col8 {width: 132px;}
+
+.table_list tr{border-bottom:1px solid #dedede; }
+.table_list td {height:65px;font-size: 16px;color:#969696;font-family: 'Roboto';text-align: center; }
+.profile{border-radius:100%;}
+.table_list .ranker_tr{height:95px;}
+.table_list .crown{position:absolute; z-index:100; top:-7px;}
+.table_list td.ranker {font-family: Raleway; padding:0 9px; padding-left:50px; color:#666666;font-size: 50px;font-weight: 700; width:130px;}
+.table_list td.rank {padding:0 9px; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
+.table_list td.name_ranker {position:relative; text-align: left; font-size:43px;font-family: 'NEXONLv1Gothic';color:#7B7B7B;font-weight: bold; }
+.table_list td.name {text-align: left; padding-left:10px;font-family: 'NEXONLv1Gothic';color:#666666; font-size:20px; font-family: SeoulNamsan; font-style: normal; font-weight: normal;}
+.table_list td.rivew_ranker{font-size:23px; text-align:right; padding-right:60px;}
+.table_list td.rivew{text-align:right; padding-right:60px;}
+.table_list td .avatar {position: relative;width: 120px;height: 120px;margin:20px 0 19px;text-align: center}
+.table_list td .avatar img {margin-top: 7px;}
+.table_list td .avatar strong {position: absolute;top:79px;left:81px;z-index: 4;display: inline-block;width: 36px;height:36px;line-height:38px;}
+.table_list td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
+.table_list td.rank2 .cover {background-position: 0 -120px}
+.table_list td.rank3 .cover {background-position: 0 -240px}
+.table_list tr.me td, .table_list tr:hover td {background-color: #e0f1ef;}
+.table_list td .no_data {font-family: 'NEXONLv1Gothic'}
+
+#footer .footer_icon{ float:left; border-radius:10%; margin-right:25px;}
+#footer .sns{padding-left:50px;top:-5px;}
+#footerWrap {position: relative;; width:100%;clear:both; text-align:center; background: white; border-top:1px solid #ccc; }
+#footer {height:95px; width:1495px; margin:0 auto; padding-top:25px; text-align:left; position:relative;}
+#footer div {float:left; position: relative; height:61px; text-align:left; }
+#footer .copy {position:absolute; padding-left:50px;font-weight:600; bottom:15px; color:#666; font-size:12px;}

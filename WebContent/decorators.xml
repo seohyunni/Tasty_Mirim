@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+ 
+<decorators defaultdir="/WEB-INF/jsp/decorators">
+   
+    
+    <decorator name="mypage" page="mypage.jsp">
+       <pattern>/mypage/*</pattern>  
+    </decorator> 
+    
+    <decorator name="sitemeshSample" page="mypage.jsp">
+       <pattern>/mypage/my_review/*</pattern>  
+    </decorator>  
+    <decorator name="sitemeshSample" page="mypage.jsp">
+       <pattern>/mypage/my_title/*</pattern>  
+    </decorator>
+      
+    <decorator name="menu" page="menu.jsp"/>
+    
+</decorators>

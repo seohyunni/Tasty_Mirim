@@ -1,0 +1,47 @@
+body {background: #fff;}
+#header {}
+#content {}
+
+
+/* 헤더 */
+.header {}
+.header .header_menu {text-align: right;}
+.header .header_menu a {color: #000; padding: 8px 20px 0px 3px; display: inline-block; transition: color 0.3s ease; font-size: 12px;}
+.header .header_menu a:hover {color: #ccc;}
+
+/* 콘텐츠 */
+.content {position: relative;}
+.content img {}
+.content img.way {position: absolute; top: 20px;}
+
+.content img.point1 {position: absolute; top: 230px; left: 100px; width: 55px; height: auto;}
+.content img.point2 {position: absolute; top: 175px; left: 350px; width: 55px; height: auto;}
+.content img.point3 {position: absolute; top: 225px; left: 600px; width: 55px; height: auto;}
+.content img.point4 {position: absolute; top: 315px; left: 850px; width: 55px; height: auto;}
+.content img.point5 {position: absolute; top: 255px; left: 1100px; width: 55px; height: auto;}
+
+.content img.speech_bubble1 {position: absolute; top: 0px; left: 95px; width: 240px; height: auto;}
+.content img.speech_bubble2 {position: absolute; top: 250px; left: 260px; width: 240px; height: auto;}
+.content img.speech_bubble3 {position: absolute; top: 0px; left: 510px; width: 240px; height: auto;}
+.content img.speech_bubble4 {position: absolute; top: 390px; left: 760px; width: 240px; height: auto;}
+.content img.speech_bubble5 {position: absolute; top: 30px; left: 920px; width: 240px; height: auto;}
+
+.content img.stamp1 {position: absolute; top: 20px; left: 200px; width: 40px; height: auto;}
+.content img.stamp2 {position: absolute; top: 320px; left: 360px; width: 40px; height: auto;}
+.content img.stamp3 {position: absolute; top: 20px; left: 610px; width: 40px; height: auto;}
+.content img.stamp4 {position: absolute; top: 460px; left: 860px; width: 40px; height: auto;}
+.content img.stamp5 {position: absolute; top: 50px; left: 1020px; width: 40px; height: auto;}
+
+.menu1 {position: absolute; top: 80px; left: 140px; text-align: center;}
+.menu2 {position: absolute; top: 380px; left: 315px; text-align: center;}
+.menu3 {position: absolute; top: 80px; left: 575px; text-align: center;}
+.menu4 {position: absolute; top: 520px; left: 820px; text-align: center;}
+.menu5 {position: absolute; top: 110px; left: 965px; text-align: center;}
+
+.menu1 .name1 {color: #FF8956; font-size: 20px; margin-bottom: 3px; font-weight: bold;}
+.menu2 .name2 {color: #FF8956; font-size: 20px; margin-bottom: 3px; font-weight: bold;}
+.menu3 .name3 {color: #FF8956; font-size: 20px; margin-bottom: 3px; font-weight: bold;}
+.menu4 .name4 {color: #FF8956; font-size: 20px; margin-bottom: 3px; font-weight: bold;}
+.menu5 .name5 {color: #FF8956; font-size: 20px; margin-bottom: 3px; font-weight: bold;}
+
+.footer {position: absolute; bottom: -50px; left: 8px; margin-bottom: 8px;}
