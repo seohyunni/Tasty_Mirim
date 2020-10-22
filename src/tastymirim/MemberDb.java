@@ -1,13 +1,16 @@
 package tastymirim;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
+import tastymirim.DBConnection;
+
 public class MemberDb {
-	final private String JDBC_DRIVER ="org.gjt.mm.mysql.Driver";
-	final private String JDBC_URL = "jdbc:mysql://localhost:3306/tastymirim";
-	final private String USER ="root";
-	final private String PASS = "mirim2";
+	final private String JDBC_DRIVER ="com.mysql.jdbc.Driver";
+	final private String JDBC_URL = "jdbc:mysql://localhost:3306/tastymirim?useUnicode=true&characterEncoding=UTF-8";
+	final private String USER ="tastymirim";
+	final private String PASS = "h4HX6ASpP2SeOrmw";
 	private java.sql.Connection conn;
 	private java.sql.PreparedStatement pstmt;
 	private String sql;
@@ -21,6 +24,17 @@ public class MemberDb {
 			e.printStackTrace();
 			System.out.println("드라이브 및 connection 오류");
 		}
+	}
+	
+	public Connection getConn() {
+		try {
+			conn = DBConnection.getConnection();	
+		} catch(Exception e){
+			e.printStackTrace();
+			System.out.println("드라이버 로딩 및 connection 오류");
+		}
+		
+		return conn;
 	}
 	
 	public void insertMember(Member member) {
@@ -83,6 +97,8 @@ public class MemberDb {
 		System.out.println(result);
 		return result;		
 	}
+	
+	
 	
 	public int deleteMember(String id) {
 		int result=0;
