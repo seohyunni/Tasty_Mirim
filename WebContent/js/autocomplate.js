@@ -21,7 +21,7 @@ let inputEvent = function (e) { var a, b, i, val = this.value;
     for (i = 0; i < _arr.length; i++) { // 배열의 요소를 현재 input의 value의 값만큼 자른 후, 같으면 추가한다.
         if (_arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             b = document.createElement("DIV"); // value의 값 만큼 굵게 표시
-            b.innerHTML = "<strong>" + _arr[i].substr(0, val.length) + "</strong>"; b.innerHTML += _arr[i].substr(val.length); b.innerHTML += "<input type='hidden' value='" + _arr[i] + "'>";
+            b.innerHTML = "<font style='font-size:21px;font-weight:bold;'>" + _arr[i].substr(0, val.length) + "</font>"; b.innerHTML += _arr[i].substr(val.length); b.innerHTML += "<input type='hidden' value='" + _arr[i] + "'>";
             //
             console.log(b); // <div class="autocomplete-active"><strong>B</strong>adger<input type="hidden" value="Badger"></div>
             // 생성된 div에서 이벤트 발생시 hidden으로 생성된 input안의 value의 값을 autocomplete할 요소에 넣기
@@ -32,9 +32,12 @@ let inputEvent = function (e) { var a, b, i, val = this.value;
             let keydownEvent = function (e) {//
                 var x = document.getElementById(this.id + "autocomplete-list");
                 // 선택할 요소 없으면 null , //<div id="autoInputautocomplete-list" class="autocomplete-items"><div class="autocomplete-active"><strong>A</strong>ardvark<input type="hidden" value="Aardvark"></div><div><strong>A</strong>lbatross<input type="hidden" value="Albatross"></div><div><strong>A</strong>lligator<input type="hidden" value="Alligator"></div><div><strong>A</strong>lpaca<input type="hidden" value="Alpaca"></div><div><strong>A</strong>nt<input type="hidden" value="Ant"></div><div><strong>A</strong>nteater<input type="hidden" value="Anteater"></div><div><strong>A</strong>ntelope<input type="hidden" value="Antelope"></div><div><strong>A</strong>pe<input type="hidden" value="Ape"></div><div><strong>A</strong>rmadillo<input type="hidden" value="Armadillo"></div></div>
-                if (x) { // 태그 네임을 가지는 엘리먼트의 유요한 html 컬렉션을 반환.
+                if (x) { 
+                	// 태그 네임을 가지는 엘리먼트의 유요한 html 컬렉션을 반환.
                     // div의 값을 htmlCollection의 값으로 받아옴.
-                    x = x.getElementsByTagName("div"); }
+                    x = x.getElementsByTagName("div");
+                    }
+                
                     if (e.keyCode == 40) { // down // 현재위치 증가
                         _currentFocus++; // 현재위치의 포커스 나타내기
                         addActive(x); }
@@ -63,12 +66,3 @@ let inputEvent = function (e) { var a, b, i, val = this.value;
                                     _inp.removeEventListener("input", inputEvent, false);
                                     _inp.removeEventListener("keydown", keydownEvent, false); } }
                                     return { setAutocomplete: function (inp, arr) { _setAutocomplete(inp, arr); }, } })();
-
-
-
- function enterkey() {
-     if (window.event.keyCode == 13) {
-        // 엔터키가 눌렸을 때 실행할 내용
-        login();
-   }
-}

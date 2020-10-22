@@ -1,144 +1,139 @@
 
+body{padding-top:115px !important;}
+/* 컨테이너 */
+.container {position: relative; margin: 0 auto; margin-top:80px;}
+
+.content1 {overflow: hidden; position: relative; width: 1250px; height: 350px; margin: 0 auto; margin-top:120px; text-align:center; box-shadow: 1px 1px 5px lightgray; background:white;}
+.content1 .background_photo{width: 100%; height: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; filter: blur(4px) brightness(0.7);}
+/* 제목 및 별점 */
+.content12 {position:relative;}
+.content2 {width: 1250px; height:265px; margin: 0 auto; text-align:center; padding: 40px; box-shadow: 1px 1px 5px lightgray; background:white; }
+.content2 .profile{border-radius: 50%; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 200px; top: 250px; border: 11px solid white;}
+.content2 .my_info{margin-top: 76px; height: 60px; font-size: 20px; }
+.content2 .my_info .name{font-size:22px; font-weight:bold; }
+.content2 .my_info .email{text-transform: lowercase;}
 
 
-
-body{
-    background: #FF8956;}
-
-	.common-header { position: relative;}
-.wrap{ background:#FF8956;}
-.content{
-	#FF8956;
-		width:1200px;
-	    padding: 80px 0 0 0;
-	    margin: 0 auto;
+/* 리뷰 */
+.content5 { width: 1250px;margin: 0 auto; padding: 50px; box-shadow: 1px 1px 5px lightgray; background:white; margin-top: 40px;
+    right: 0px;}
+.content5 .tit{    text-align: center; font-size: 26px; font-weight: bold; margin-bottom: 50px;}
+.content5 .review_scroll{overflow:auto; height:720px;  padding: 33px; padding-top:0;}
+.content5 .review_scroll::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #f2f2f2;
 }
 
-.profile_wrap{
-	background:white;
-	border-radius:10px;
-	width:100%;
-	margin-top:210px;
-	text-align:center;
-	height:300px;
-		
+.content5 .review_scroll::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
 }
 
-.profile_wrap .profile_photo{
-	position:relative;
-	border-radius:100%;
-	top:-140px;
+.content5 .review_scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #7d7d7d;
 }
 
-.profile_wrap .profile_name{
-	    font-weight: bold;
-    position: relative;
-    top: -120px;
-    font-family: noto sans-serif;
-    font-size: 50px;
-	
+
+.review_concon {background-color: #FF976A; width: 1250px; height: 372px; position: absolute; top: 360px; left: 0; right: 0; margin-left: auto; margin-right: auto;}
+
+.review_write_table {border:1px #ececec solid; margin-top: 10px; margin-bottom:50px; font-size:16px; border: solid 1px #c5c5c5;}
+
+table {position: relative; font-size: 16px; background-color: #fff; width: 100%; color: #000; text-transform: uppercase; font-size: 14px; margin-bottom: 20px;}
+tr, td {border-bottom: 1px solid #000;}
+.review_before tr, .review_before td {border: 0;}
+
+
+.review_list{font-size:16px; cursor:pointer; border: solid 1px #c5c5c5; background: #f9f9f9; box-shadow: 1px 1px 5px lightgrey;}
+.review_list td{padding:20px;}
+.review_list:hover{filter:brightness(0.9)}
+
+td.review_profile {width: 140px; text-align: center;  vertical-align: top; padding: 20px;border: 0;}
+td.review_profile .profile_photo { border-radius: 50%; background-color: black; width: 80px; height: 80px; margin-bottom: 13px;}
+td.review_profile .profile_name { font-weight: bold;}
+
+td.res_name{width:180px; font-weight: bold; font-size: 17px;}
+
+
+td.review_score { height: 26px;}
+.review_before td.review_score {width: 240px; height: 60px;}
+td.review_score .score {float: right;}
+td.review_score .score img {float: left; width: 16.6px; height: auto; margin-right: 2px; margin-top: 1.2px;}
+td.review_score .score div {float: left; margin-left: 4px; color: #FF976A; font-weight: bold; margin-top: 0.2px;}
+
+td.review_date {width: 200px; height: 26px;}
+td.review_date div {float: right; margin-right: 12px;  color: gray;}
+
+td.review_content {height: 50px;}
+td.review_content textarea {width:100%; padding:10px; font-size: 16px; border: 1px solid #ececec; border-left: 0px; border-right: 0px; }
+
+td.review_submit{text-align:right; height: 60px;}
+
+td.review_photo {height: 100%; border: 0;}
+td.review_photo .photo_user {width: 290px; cursor:pointer;}
+td.review_photo .addPhoto2 {}
+ 
+.delete_td{text-align:right;} 
+ 
+.delete_submit {
+	height: 100%;
+    width: 100px;
+    background-color: #DC3545;
+    border: 1px solid #DC3545;
+    border-radius: 1px;
+    color: #ffffff;
+    cursor:pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 0.5em 0.6875em;
 }
 
-.review_wrap{
-	background:white;
-	border-radius:10px;
-	width:100%;
-	padding:50px;
-	margin-top:40px;
-	height:900px;
-    text-align: center;
-    padding-top:30px;
-}
-.review_wrap .review_title{
-	
-    color: #3e3e3e;
-    font-size: 27px;
-    font-weight: bold;
-    margin-bottom: 25px;
+.delete_submit:active,
+.delete_submit:focus,
+.delete_submit:hover {
+    background-color: #a31d2b;
+    border-color: #a31d2b;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.review_table{
-	    width: 100%;
-    border: 1px solid gray;
-    border-radius: 100px;
-    height: 300px;
-    padding-top: 30px;
+/* 별점 주기 - 엄.. 이상이상... */
+.review_star>.input,
+.review_star>.input>label:hover,
+.review_star>.input>input:focus+label,
+.review_star>.input>input:checked+label{display: inline-block;vertical-align:middle;background:url('../img/grade_img.png')no-repeat;}
+.review_star{display:inline-block; white-space:nowrap;width:225px;padding:10px;line-height:30px;}
+.review_star>.input{display:inline-block;width:150px;background-size:150px;height:28px;white-space:nowrap;overflow:hidden;position: relative;}
+.review_star>.input>input{position:absolute;width:1px;height:1px;opacity:0;}
+review_star>.input.focus{outline:1px dotted #ddd;}
+.review_star>.input>label{width:30px;height:0;padding:28px 0 0 0;overflow: hidden;float:left;cursor: pointer;position: absolute;top: 0;left: 0;}
+.review_star>.input>label:hover,
+.review_star>.input>input:focus+label,
+.review_star>.input>input:checked+label{background-size: 150px;background-position: 0 bottom;}
+.review_star>.input>label:hover~label{background-image: none;}
+.review_star>.input>label[for="p1"]{width:30px;z-index:5;}
+.review_star>.input>label[for="p2"]{width:60px;z-index:4;}
+.review_star>.input>label[for="p3"]{width:90px;z-index:3;}
+.review_star>.input>label[for="p4"]{width:120px;z-index:2;}
+.review_star>.input>label[for="p5"]{width:150px;z-index:1;}
+.review_star>output{display:inline-block;width:60px; font-size:18px;text-align:right; vertical-align:middle;}
+        /* Set the size of the div element that contains the map */
+
+/* 파일 업로드 */
+.addPhoto2 {position: absolute; left: 402px; top: 170px;}
+
+
+
+
+
+
+
+/* mediaquery */
+/* 화면너비 0px ~ 1220px */
+@media (max-width: 1220px) {
 }
-
-.review_table .res_name{ 
-	height: 80px;
-    text-align: left;
-    padding-left: 10px;
-    font-size: 30px;
-    font-weight: bold;}
-    
- .review_table .res_score{
- 	    height: 30px;
-    text-align: left;
-    padding-left: 10px;
- }
-.review_table .date{
-	padding-right: 18px;
-    text-align: left;
-    font-size: 20px;
-}
-
-.review_table .review_photo{width:400px; }
-
-.review_table .review_content{
-    padding: 30px 10px 10px 10px;
-    text-align: left;
-    vertical-align: top;}
-    
-.title_wrap{
-	background:white;
-	border-radius:10px;
-	width:100%;
-	padding:50px;
-	margin-top:40px;
-	margin-bottom:100px;
-	text-align:center;
-}
-
-.title_wrap .title_title{
-	
-    color: #3e3e3e;
-    font-size: 27px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-.title_table{
-	    width: 100%;
-    border: 1px solid gray;
-    border-radius: 100px;
-    height: 200px;
-    padding-top: 30px;
-}
-
-.title_table .title_name{ 
-	height: 80px;
-    text-align: left;
-    padding-left: 10px;
-    font-size: 30px;
-    font-weight: bold;}
-    
- .title_table .title_score{
- 	    height: 30px;
-    text-align: left;
-    padding-left: 10px;
- }
-
-.title_table .title_photo{width:400px; }
-
-.title_table .title_content{
-    padding: 30px 10px 10px 10px;
-    text-align: left;
-    vertical-align: top;}
-#footer .footer_icon{ float:left; border-radius:10%; margin-right:25px;}
-#footer .sns{padding-left:50px;top:-5px;}
-#footerWrap {position: absolute; left:0; bottom:0; width:100%;clear:both; text-align:center; background: #f5f5f5; border-top:1px solid #ccc; }
-#footer {height:95px; width:1495px; margin:0 auto; padding-top:25px; text-align:left; position:relative;}
-#footer div {float:left; position: relative; height:61px; text-align:left; }
-#footer .copy {position:absolute; padding-left:50px;font-weight:600; bottom:15px; color:#666; font-size:12px;}
-	

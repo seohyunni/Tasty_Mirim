@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import "base.css";
+/* 레이아웃 */
+body{padding-top:115px !important;}
+body {margin: 0; padding: 0; height: 100%; position: relative; background-color: #ececec;}
+/* 컨테이너 */
+.container {position: relative; margin: 0 auto; margin-top: 120px; width: 1250px; width:1310px;
+	    margin: 0 auto;}
+
+/* 메인_백그라운드 */
+main.background {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* contents */
+.contents {position: relative; width: 100%;}
+.content1 {width: 1130px; padding-left: 60px;}
+.content2 {width: 1130px; padding-left: 60px;}
+.content3 {width: 1130px; padding-left: 60px;}
+
+
+/* recommend */
+.recommend {float: left; width: 380px; height: 210px; position: relative; overflow: hidden; margin-right: 25px; box-shadow: 1px 1px 5px #8c8c8c;}
+
+.recommend img {width: 380px; height: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+
+.recommend a {color: #fff; font-size: 14px;}
+.recommend a .recommend_over {position: absolute; padding-top: 75px; width: 380px; height: 210px; background-color: rgba(0, 0, 0, 0.5); text-align: center; font-size: 15px; letter-spacing: -1px;}
+.recommend a .recommend_over .recommend_tit {font-size: 24px; font-weight: bold; line-height: 35px; font-family: 'Jua', sans-serif; letter-spacing:2.2px;}
+
+.enter {margin-right: 0; box-shadow: 1px 1px 5px #8c8c8c;}
+
+
+/* 제목 */
+.big_title {margin-left: 60px; margin-bottom: 0px; margin-top: 70px; font-size: 24px; font-weight: bold;}
+
+
+/* restaurant */
+.content_set {margin-left: 60px; width: 1195px; overflow: hidden;}
+
+.restaurant {float: left; margin-right: 15px; margin-bottom: 30px;}
+.restaurant a {}
+
+.restaurant .restaurant_img {width: 283.75px; height: 150px; position: relative; overflow: hidden;  box-shadow: 1px 1px 5px #8c8c8c;}
+.restaurant .restaurant_img  img {width: 283.75px; height: auto; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;}
+.restaurant .restaurant_img  img:hover {filter:brightness(0.5);}
+
+.restaurant .restaurant_name {float: left; text-transform: uppercase; font-size: 20px; font-weight: bold; margin-right: 10px; margin-top:10px;}
+.restaurant .restaurant_score {float: left; color: salmon; font-size: 20px; font-weight:bold; margin-top:10px}
+
+
+/* contents 슬라이드 */
+.content123 .slick-dots {display: none !important; width: auto; margin-left: -40px; text-align: center;}
+.content123 .slick-dots li {display: inline-block; width: 10px; height: 15px; margin: 5px;}
+.content123 .slick-dots li button {border: 1px solid #000; box-shadow: -1px -1px 1px 1px rgba(0, 0, 0, 0.3) inset; font-size: 0; line-height: 0; display: block; width: 10px; height: 15px; cursor: pointer; background: #fff; border-radius: 50%;}
+.content123 .slick-dots li.slick-active button {background: #000;}
+
+.content123 .slick-prev {position: absolute; left: 0px; top: 60px; border: 0; z-index: 10; display: inline-block; text-indent: -9999px; background: 0; cursor: pointer;}
+.content123 .slick-prev::before {content: "<"; font-size: 60px; font-weight: bold; color: #000; text-indent: 0px; position: absolute; left: 0px; top: 0px;}
+.content123 .slick-next {position: absolute; right: 0px; top: 60px; border: 0; z-index: 10; display: inline-block; text-indent: -9999px; background: 0; cursor: pointer;}
+.content123 .slick-next::before {content: ">"; font-size: 60px; font-weight: bold; color: #000; text-indent: 0px; position: absolute; right: 0px; top: 0px;}

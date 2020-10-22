@@ -1,0 +1,17 @@
+/* 푸터 */
+#footer {margin-top:80px; width:100%; background:black; padding: 45px;}
+.footer {color: #fff; margin: 0 auto; text-align: center; font-size: 10px; width:auto; }
+.footer td{padding:10px}
+.footer li {position: relative; display: inline; padding: 0px 7px 0px 10px; white-space: nowrap;}
+.footer li:before {content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0px; top: 2px;}
+.footer li:first-child:before {width: 0;}
+.footer address { text-align: center; }
+
+.footer a {color: #fff;}
+
+.footer .school_info {font-size: 14px; font-weight: bold; margin-bottom: 15px;}
+.footer .student_info {font-weight: bold;}
+
+.footer .address { left: 0; right: 0; margin-left: auto; margin-right: auto;}
+.footer .korea_address { border: 1px solid #fff; padding: 6px 10px 6px 10px; border-radius: 5px; width: auto;}
+.footer .english_address { border: 1px solid #fff; padding: 6px 10px 6px 10px; border-radius: 5px; width: auto;}

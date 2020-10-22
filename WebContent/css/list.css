@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import "base.css";
+
+body{background:#ff976a;}
+
+body{padding-top:115px !important;}
+	.common-header { position: relative;}
+.wrap{}
+.content{
+		width:1250px;
+	    margin: 0 auto;
+}
+
+
+.category{text-align:center; margin: 0 auto; margin-top: 60px;font-size: 19px; color:#ff976a; font-weight: bold; width:1000px;}
+.category img{width:55px; margin-bottom: 10px; filter: brightness(150);}
+.category td{cursor:pointer; color:white}
+.category td:hover{}
+.category td {
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.category .border{border-bottom: solid 7px white;}
+.banner{text-align:center; margin: 0 auto; margin-top: 60px;font-size: 19px; color:#ff976a; font-weight: bold; width:1000px; border: 7px solid white;}
+.banner img{width:55px; margin-bottom: 10px;}
+.banner .msg{ font-size: 55px; color: white; font-family: 'Jua', sans-serif; letter-spacing:2.2px; padding-bottom: 20px; padding-top: 8px;}
+.banner .msg2{    font-size: 24px; letter-spacing: 0; font-weight: bold;}
+
+
+.all_list {cursor:pointer;width: 1250px; margin:0 auto; background:white;background:white; border-bottom: 1px solid lightgray;}
+.all_list table {position: relative;width: 100%;}
+.all_list td {font-size: 16px;padding: 30px;color:#969696;text-align: center; }
+.all_list td.res_des{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.all_list .crown{position:absolute; z-index:100; top:-7px;}
+.all_list td.image{}
+.all_list td.image .image_wrap{overflow: hidden; position: relative; width: 350px; height: 200px; margin: 0 auto;  text-align:center;}
+.all_list td.image img{width:100%;height: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+
+
+
+.all_list td.res_name {color:#666666;font-size: 23px;font-weight: bold; text-align:left; padding-left:0;}
+.all_list td.res_location {text-align: left; color:#7B7B7B;  padding-top: 0; padding-left:0; padding-bottom: 0;}
+.all_list td.res_des {text-align: left; color:#7B7B7B;  border-bottom: 1px solid #dedede;padding-left:0;}
+
+.all_list td.res_score {text-align: right; font-weight: bold; font-size: 30px; color: #ff976a;  }
+
+.all_list:hover{filter:brightness(0.9)}
+#search_wrap{}
+.search_result{border-bottom: 1px solid #dedede; }
+.search_contents {cursor:pointer;}
+.search_contents:hover{background:#e8e8e8;}
+
+
+	.autocomplete { position: relative; display: inline-block; }
+	.autocomplete-items { position: absolute; border: 1px solid #d4d4d4;
+    border-bottom: none; border-top: none; z-index: 99;
+    top: 100%; left: 0; right: 0; }
+	.autocomplete-items div { padding: 10px; cursor: pointer; background-color: #fff;
+    border-bottom: 1px solid #d4d4d4; }
+	.autocomplete-items div:hover { background-color: #e9e9e9; }
+	.autocomplete-active { background-color: DodgerBlue !important; color: #ffffff; }
+
+.search_title{font-weight: normal;
+    font-size: 30px;
+    position: right;
+    position: relative;
+    height: 100px;
+    padding: 30px 0;border-bottom: 3px solid #535353;
+    }
+#search_wrap{
+	position: absolute;
+    margin-top: 70px;
+    width: 100%;
+    padding-top: 40px;
+    border-top: solid 1px lightgray;
+    left: 0;
+    background: white;
+}
+#search_wrap .search {
+  position: relative;
+  top:-73px;
+  float:right;
+}
+
+#search_wrap .searchTerm {
+  width: 300px;
+  border: 3px solid #FF8956;
+  border-right: none;
+  padding: 10px;
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 20px;
+  background: white;
+  position: relative;
+    left: 6px;
+}
+
+#search_wrap .searchTerm:focus{
+  color: #ff6928;
+}
+#search_wrap .searchButton {
+  width: 60px;
+  height: 50px;
+  border: 1px solid #FF8956;
+  background: #FF8956;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#search_wrap .x{ float:right; margin:40px 40px 0px 0px; cursor:pointer;}
+
+ h3{   font-size: 19px;
+    letter-spacing: -.50px;
+    padding-top: 11px;
+    padding-bottom: 17px;
+    border-bottom: 2px solid #000;
+}
+}

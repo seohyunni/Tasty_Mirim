@@ -26,7 +26,7 @@
 
 	   %>
 	    <script>
-	   location.href='./index.jsp';
+	    window.location=document.referrer;
 	   </script>
 	   <% 
    }	else if(result == 2){
@@ -35,7 +35,7 @@
 	   
 	   %>
 	   <script>
-	   location.href='./index.jsp';
+	   window.location=document.referrer;
 	   </script>
 	   <%
    }

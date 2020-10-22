@@ -1,41 +1,269 @@
 body{background:#FF8956}
 
+body{padding-top:115px !important;}
 @charset "utf-8";
 .common-header { position: relative;}
-.wrap{padding-top:80px; background:#FF8956}
-.ranking_title{position:relative; margin-top:50px; margin-bottom:15px;color:white; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 70px; line-height: 95px; text-align: center;}
-.table_list {position: relative; width: 800px; margin:0 auto;padding-top: 7px; margin-bottom:80px; background:white; border-radius:1%;}
-.table_list table {position: relative;width: 100%;}
-.table_list th {height: 68px;font-size: 16px;color:#333;border-bottom:2px solid #dedede;font-weight: normal}
-.table_list th.col1 {width:138px;}
-.table_list th.col2 {width: 120px;}
-.table_list th.col3 {padding-left: 47px;text-align: left;}
-.table_list th.col4, .table_list th.col5, .table_list th.col6,
-.table_list th.col7, .table_list th.col8 {width: 132px;}
+.wrap{ background:#ececec}
+.ranking_title{position:relative; margin-top:50px; margin-bottom:30px;color: #2d2d2d; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 30px; line-height: 95px; text-align: center;}
+.table_ranker {position: relative;background:white; margin-right: 12px; margin-left: 12px; box-shadow: 1px 1px 5px lightgray;}
+.table_ranker table {position: relative;width: 100%;}
+.table_ranker th {height: 68px;font-size: 16px;color:#333;font-weight: normal}
+.container2{width:1250px; margin:0 auto;}
 
-.table_list tr{border-bottom:1px solid #dedede; }
-.table_list td {height:65px;font-size: 16px;color:#969696;font-family: 'Roboto';text-align: center; }
+.table_list{    margin-top: 40px;}
+.table_ranker tr{}
+.table_ranker td {height:65px;font-size: 16px;padding:30px; padding-top: 40px; color:#969696;text-align: center; }
 .profile{border-radius:100%;}
-.table_list .ranker_tr{height:95px;}
-.table_list .crown{position:absolute; z-index:100; top:-7px;}
-.table_list td.ranker {font-family: Raleway; padding:0 9px; padding-left:50px; color:#666666;font-size: 50px;font-weight: 700; width:130px;}
-.table_list td.rank {padding:0 9px; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
-.table_list td.name_ranker {position:relative; text-align: left; font-size:43px;font-family: 'NEXONLv1Gothic';color:#7B7B7B;font-weight: bold; }
-.table_list td.name {text-align: left; padding-left:10px;font-family: 'NEXONLv1Gothic';color:#666666; font-size:20px; font-family: SeoulNamsan; font-style: normal; font-weight: normal;}
-.table_list td.rivew_ranker{font-size:23px; text-align:right; padding-right:60px;}
-.table_list td.rivew{text-align:right; padding-right:60px;}
-.table_list td .avatar {position: relative;width: 120px;height: 120px;margin:20px 0 19px;text-align: center}
-.table_list td .avatar img {margin-top: 7px;}
-.table_list td .avatar strong {position: absolute;top:79px;left:81px;z-index: 4;display: inline-block;width: 36px;height:36px;line-height:38px;}
-.table_list td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
-.table_list td.rank2 .cover {background-position: 0 -120px}
-.table_list td.rank3 .cover {background-position: 0 -240px}
-.table_list tr.me td, .table_list tr:hover td {background-color: #e0f1ef;}
-.table_list td .no_data {font-family: 'NEXONLv1Gothic'}
+.table_ranker .ranker_tr{height:120px;}
+.table_ranker .crown{position:absolute; z-index:100; top:90px;}
+.table_ranker td.ranker {width: 500px;color:#666666;font-size: 30px;font-weight: 700; }
+.table_ranker td.rank {padding:0 9px; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
+.table_ranker td.profile_ranker{}
+.table_ranker td.profile_ranker img{width:100px;}
 
-#footer .footer_icon{ float:left; border-radius:10%; margin-right:25px;}
-#footer .sns{padding-left:50px;top:-5px;}
-#footerWrap {position: relative;; width:100%;clear:both; text-align:center; background: white; border-top:1px solid #ccc; }
-#footer {height:95px; width:1495px; margin:0 auto; padding-top:25px; text-align:left; position:relative;}
-#footer div {float:left; position: relative; height:61px; text-align:left; }
-#footer .copy {position:absolute; padding-left:50px;font-weight:600; bottom:15px; color:#666; font-size:12px;}
+.table_ranker td.name_ranker {position:relative; text-align: center; font-size:28px;color:#2d2d2d;font-weight: bold; padding-top: 0; padding-bottom: 40px;}
+.table_ranker td.name {text-align: left;color:#666666; font-size:20px; font-style: normal; font-weight: normal;}
+.table_ranker td.rivew_ranker{font-size:20px; text-align:center; padding-bottom: 40px;}
+.table_ranker td.rivew{text-align:right; padding-right:60px;}
+.table_ranker td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
+.table_ranker td.rank2 .cover {background-position: 0 -120px}
+.table_ranker td.rank3 .cover {background-position: 0 -240px}
+
+.table_list2{
+    margin: 12px;
+    margin-top: 30px; }
+.table_rank {background:white; width: 1225px; margin-bottom: 24px; box-shadow: 1px 1px 5px lightgray;}
+.table_rank td {height:65px;font-size: 16px;padding:30px; color:#969696;text-align: center; }
+.table_rank .profile{border-radius:100%;}
+.table_rank .ranker_tr{height:120px;}
+.table_rank .crown{position:absolute; z-index:100; top:90px;}
+.table_rank td.rank {padding:0 9px; width: 100px; text-align: left; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
+.table_rank td.profile_ranker{}
+.table_rank td.profile_ranker img{width:100px;}
+
+.table_rank td.name {text-align: left; color:#666666; font-size:20px; font-style: normal; font-weight: normal;}
+.table_rank td.rivew{text-align:right; padding-right:60px; width:200px;}
+.table_rank td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
+.table_rank td.rank2 .cover {background-position: 0 -120px}
+.table_rank td.rank3 .cover {background-position: 0 -240px}
+
+
+.table_ranker2 {position: relative; cursor:pointer; background:white; margin-right: 12px; margin-left: 12px; margin-top: 24px; box-shadow: 1px 1px 5px lightgray;}
+.table_ranker2:hover{filter:brightness(0.8)}
+.table_ranker2 table {position: relative;width: 100%;}
+.table_ranker2 th {height: 68px;font-size: 16px;color:#333;font-weight: normal}
+.container2{width:1250px; margin:0 auto;}
+
+.table_list{    margin-top: 40px;}
+.table_ranker2 tr{}
+.table_ranker2 td {height:65px;font-size: 16px;padding:30px; padding-top: 0px; color:#6d6969;text-align: center; }
+
+.table_ranker2 .ranker_tr{height:120px;}
+.table_ranker2 .crown{position:absolute; z-index:100; top:90px;}
+.table_ranker2 td.ranker { width: 500px;color:#666666;font-size: 33px;font-weight: 700; }
+.table_ranker2 td.rank {padding:0 9px; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
+.table_ranker2 td.profile_ranker{}
+.table_ranker2 td.profile_ranker img{width:100px;}
+
+.table_ranker2 td.name_ranker {position:relative; text-align: center; font-size:28px;color:#2d2d2d;font-weight: bold; padding-top: 0; padding-bottom: 40px;}
+.table_ranker2 td.name {text-align: left;color:#666666; font-size:20px; font-style: normal; font-weight: normal;}
+.table_ranker2 td.rivew_ranker{font-size:20px; text-align:center; padding-bottom: 40px;}
+.table_ranker2 td.rivew{text-align:right; padding-right:60px;}
+.table_ranker2 td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
+.table_ranker2 td.rank2 .cover {background-position: 0 -120px}
+.table_ranker2 td.rank3 .cover {background-position: 0 -240px}
+
+.table_list2{
+    margin: 12px;
+    margin-top: 30px;}
+.table_rank {background:white;  width: 1225px; margin-bottom: 24px; box-shadow: 1px 1px 5px lightgray;}
+.table_rank td {height:65px;font-size: 16px;padding:30px; color:#969696;text-align: center; }
+.table_rank .profile{border-radius:100%;}
+.table_rank .ranker_tr{height:120px;}
+.table_rank .crown{position:absolute; z-index:100; top:90px;}
+.table_rank td.rank {padding:0 9px; width: 100px; text-align: left; padding-left:50px;color:#666666;font-size: 33px;font-weight: 700;}
+.table_rank td.profile_ranker{}
+.table_rank td.profile_ranker img{width:100px;}
+
+.table_rank td.name {text-align: left; color:#666666; font-size:20px; font-style: normal; font-weight: normal;}
+.table_rank td.rivew{text-align:right; padding-right:60px; width:200px;}
+.table_rank td.rank .cover {position: absolute;left:0;top:0;z-index: 3;display: block;width: 120px;height: 120px;background:  url('https://ssl.nx.com/S2/Game/ca/ca2019/sub/bg_rank_cover.png') no-repeat;}
+.table_rank td.rank2 .cover {background-position: 0 -120px}
+.table_rank td.rank3 .cover {background-position: 0 -240px}
+
+/* DEMO 5 */
+
+.wrapper-dropdown-5:focus {
+    border-radius: 5px 5px 0 0;
+    background: #ff976a;
+    box-shadow: none;
+    border-bottom: none;
+    color: white;
+}
+
+.wrapper-dropdown-5:focus:after {
+    border-color: #ff976a transparent;
+}
+
+.wrapper-dropdown-5:focus .dropdown {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    max-height: 400px;
+}
+
+/* GLOBALS */
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background: transparent; 
+}
+
+::-moz-selection {
+    background: transparent; 
+}
+
+.wrapper-demo {
+    margin: 40px 0 0 0;
+    *zoom: 1;
+    font-weight: 400;
+    font-family: 'Jua', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing:2px;
+}
+
+.wrapper-demo:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* DEMO 5 */
+
+.wrapper-dropdown-5 {
+    /* Size & position */
+    width: 400px;
+    font-family: 'Jua', sans-serif;
+    position: relative;
+    margin: 0 auto;
+    padding: 12px 15px;
+
+    /* Styles */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper-dropdown-5:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #ffa57d transparent;
+}
+
+.wrapper-dropdown-5 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-top: none;
+    border-bottom: none;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Hiding */
+    max-height: 0;
+    overflow: hidden;
+}
+
+.wrapper-dropdown-5 .dropdown li {
+    font-family: 'Jua', sans-serif;
+    padding: 0 10px ;
+}
+
+.wrapper-dropdown-5 .dropdown li a {
+    font-family: 'Jua', sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    transition: all 0.3s ease-out;
+    border-bottom: 1px solid #e6e8ea;
+}
+
+.wrapper-dropdown-5 .dropdown li:last-of-type a {
+    font-family: 'Jua', sans-serif;
+    border: none;
+}
+
+.wrapper-dropdown-5 .dropdown li i {
+    font-family: 'Jua', sans-serif;
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+}
+
+/* Hover state */
+
+.wrapper-dropdown-5 .dropdown li:hover a {
+    font-family: 'Jua', sans-serif;
+    color: #ff976a;
+}
+
+/* Active state */
+
+.wrapper-dropdown-5.active {
+    font-family: 'Jua', sans-serif;
+    border-radius: 5px 5px 0 0;
+    background: #ff976a;
+    box-shadow: none;
+    border-bottom: none;
+    color: white;
+}
+
+.wrapper-dropdown-5.active:after {
+    font-family: 'Jua', sans-serif;
+    border-color: #ffa57d transparent;
+}
+
+.wrapper-dropdown-5.active .dropdown {
+    font-family: 'Jua', sans-serif;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    max-height: 400px;
+}
+
+
+.res_image_div{overflow: hidden; position: relative; width: 350px; height: 250px; margin: 0 auto; text-align:center; background:#e7e7e7;}
+.res_image{width: 100%; height: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }

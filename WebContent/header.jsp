@@ -11,16 +11,42 @@
    <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script type="text/javascript" src="./js/restaurant.js"></script>
   <script type="text/javascript" src="./js/autocomplate.js"></script>
-  <script src="//www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/header.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 
-<% request.setCharacterEncoding("UTF-8"); %>
+	<% request.setCharacterEncoding("UTF-8"); %>
 </head>
-<% String id = (String)session.getAttribute("id");%>
+<% 
+
+String id = (String)session.getAttribute("id");
+ %>
+<% session.setAttribute("id", id);
+	%>
+
 
 
 <script>
+$(function(){
+	var lastScrollTop = 0, delta = 15;
+	$(window).scroll(function(event){
+		var st = $(this).scrollTop();
+		
+		if(Math.abs(lastScrollTop - st) <= delta)
+			return; // 스크롤값을 받아서 리턴한다.
+	if ((st > lastScrollTop) && (lastScrollTop>0)) {
+		$("header").css("top","-115px"); // 스크롤을 내렸을때 #header의 CSS 속성중 top 값을 -50px로 변경한다.
+		
+	} else {
+		$("header").css("top","0px"); // 스크롤을 올렸을때 #header의 CSS 속성중 top 값을 0px로 변경한다.
+	}
+		lastScrollTop = st;
+	});
+});
 
 
 function checkLoginStatus(){
@@ -31,10 +57,6 @@ function checkLoginStatus(){
       loginBtn.value = '로그아웃';
       document.getElementById("mypageBtn").style.display='inline';
       var profile = gauth.currentUser.get().getBasicProfile();
-      console.log('ID: ' + profile.getId());
-      console.log('Full Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail());
       
       var id = profile.getId();
       var name = profile.getName();
@@ -48,12 +70,14 @@ function checkLoginStatus(){
       f.email.value=email;
        
       if(<%= id %> == null){
+    	  <% session.setAttribute("id", id);%>
 		  f.submit();
       }
     } else {
       console.log('logouted');
       loginBtn.value = '로그인';
       document.getElementById("mypageBtn").style.display='none';
+    	  gauth.disconnect();
       <%session.removeAttribute("id");%>
     }
   }
@@ -79,6 +103,18 @@ function checkLoginStatus(){
 	        document.getElementById("SearchLayer").style.display='none'
 	        document.getElementById("autoInput").value=''
 	    }
+	
+	function cookiesAllDel(){
+		 var cookiesArray = "";
+		 var cookiesCount = 0;
+		 var ckArray = "";
+		 cookiesArray = document.cookie.split(";");
+		 cookiesCount = cookiesArray.length;
+		 for (var i = 0; i < cookiesCount; i++ ){
+		  ckArray = cookiesArray[i].split("=");
+		  document.cookie = ckArray[0] + "=''; path=https://localhost:8765/; expires='';"
+		 }
+		}
 	   
 	    // autocomplete 부분을 생성
 	    window.onload = function () {
@@ -93,44 +129,51 @@ function checkLoginStatus(){
       <h1 class="logo"><a href="./index.jsp">생생미림통</a></h1>
         <div class="nav-scroll-wrap">
           <ul class="nav">
+          <li class="mm">
+            	 <a href="javascript:ViewSearch();" class="mm-link"><img style="margin-bottom:5px;" src="./img/search.png" width=32></a>
+           	</li>
             <li class="mm">
-              <a href="./stamp.html" class="mm-link">도장깨기</a>
+              <a href="./list.jsp?sort=0" class="mm-link">맛집 리스트</a>
+            </li>
+             <li class="mm">
+              <a href="./recommend.jsp" class="mm-link">추천</a>
             </li>
             <li class="mm">
-              <a href="./ranking.jsp" class="mm-link">랭킹</a>
+              <a href="./ranking2.jsp" class="mm-link">랭킹</a>
             </li>
-        <ul class="nav2">
-            </li>
+            
+           </ul>
+           
               <div class="googleLogin" align="center">
+        <ul class="nav2">
               
-            <li class="mm">
-              <input type="button" id="mypageBtn" value="마이페이지" onclick="location.href='./mypage.jsp';" style="display:none">
-				  </li>
+               		<li class="mm">
+             		 <input type="button" id="mypageBtn" value="마이페이지" onclick="location.href='./mypage.jsp';" style="display:none">
+				    </li>
 				  
 				  <li class="mm">
-              <input type="button" id="loginBtn" value="로그인" onclick="
-				   	 if(this.value === '로그인'){
-				      gauth.signIn().then(function(){
-				        console.log('gauth.signIn()');
-				        checkLoginStatus();
-				      });
-				    } else {
-				      gauth.signOut().then(function(){
-				        console.log('gauth.signOut()');
-				        checkLoginStatus();
-				      });
-				    };search();
-				  ">
+		              <input type="button" id="loginBtn" value="로그인" onclick="
+						   	 if(this.value === '로그인'){
+						      gauth.signIn().then(function(){
+						        console.log('gauth.signIn()');
+						        checkLoginStatus();
+						      });
+						    } else {
+						      gauth.signOut().then(function(){
+						        console.log('gauth.signOut()');
+						        checkLoginStatus();
+						        gauth.disconnect();
+						      });
+						        gauth.disconnect();
+						    	cookiesAllDel();
+								location.href='logout.jsp';
+						    	  	    };">
 				  </li>
-            </div>
-            
-                <a href="javascript:ViewSearch();" class="mm-link02"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png" width=45 heigth=45></a>
-              </li>
             </ul>
+            </div>
     </div>
   </div>
-  
-  <div class="common-header-dim"></div>
+  </div>
 </header>
 <!-- // header -->
 
@@ -138,21 +181,35 @@ function checkLoginStatus(){
       background: none rgba(0, 0, 0, 0.8);
       filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#80000000', endColorstr='#80000000');
       " align='center'>
+      <img class="x" src="./img/close.png" onclick='CloseSearch()' width=60 height=60>
           <div class="srch_form autocomplete">
-              <div class="search">
                 <form action="./search.jsp" method="post">
-	                <table>
+	                <table class="search_table2" style=" width:auto; margin-left: 100px;">
 			              <tr>
-			              <td>	
-				              <input id="autoInput" name="word" class="searchTerm"  placeholder="맛집 검색" >
-				              <input type="submit" class="searchButton" value="검색" name = "btnSearch" id="btnSearch" onkeyup="enterkey();" onclick="compare()" >
+			              <td colspan=3 style="text-align: center;">	
+				              <input id="autoInput" name="word"  class="searchTerm"  placeholder="맛집 검색" autocomplete="off" >
+				              
+			            </td>
+			            <td>
+			            <input type="submit" class="searchButton" value="검색" name = "btnSearch" id="btnSearch" onkeyup="enterkey();" onclick="compare()" >
 			            </td>
 			            </tr>
+			           
 		            </table>
 	            </form>
-           	 </div>
           </div>
-      <image class="x" src="https://www.iconsdb.com/icons/preview/white/x-mark-xxl.png" onclick='CloseSearch()' width=60 height=60>
+          <table style="width:auto;">
+          		 <tr class="recommend_tr">
+			            <script>
+			            var color = ["#ff9292" ,"#f2ee97","#afe5ad", "#83b8f4", "#ecb3d2"];
+			            	for(i=0; i<4; i++){
+			            		var random = Math.floor(Math.random() * restaurant.length);
+			            		var color_random = Math.floor(Math.random() * color.length);
+			            		document.write("<td class='recommend_search'><a href='search.jsp?word="+restaurant[random]+"'><div class='recommend_div' style='border:4px solid "+color[color_random]+";'># "+restaurant[random]+"</div></a></td>");
+								
+			            	}
+			            </script>
+          </table>
     </div>
 
 <form method="post" id="login_form" name="login_form" action="./loginOk.jsp"> 
@@ -172,16 +229,17 @@ function checkLoginStatus(){
 var loginBtn = document.getElementById('loginBtn');
 console.log("아이디는 "+<%=id%>);
 if(<%=id%> == null){
-	console.log('djelRKwl');
+	console.log('로그인 안됨');
     loginBtn.value = '로그인';
     document.getElementById("mypageBtn").style.display='none';
 }
 else{
-	console.log('dhkTsk');
+	console.log('로그인 되어잇');
 	loginBtn.value = '로그아웃';
     document.getElementById("mypageBtn").style.display='inline';
 }
-<% session.setAttribute("id", id); %>
-
 </script>
+  <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 </html>
+<% session.setAttribute("id", id);
+	%>

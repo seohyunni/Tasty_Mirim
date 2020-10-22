@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Context>
+		<Resource name = "jdbc/tastymirim" 
+					auth = "Container"
+					type = "javax.sql.DataSource"
+					driverClassName = "com.mysql.jdbc.Driver"
+					url = "jdbc:mysql://localhost:3306/tastymirim"
+					username = "tastymirim" password = "h4HX6ASpP2SeOrmw"
+					maxTotal = "20" maxIdle = "10" maxWaitMillis = "-1" /> 
+<!-- 내가 사용하는 자원들에 관해서 정의해 놓는다고 하여 Resource라고 한다.
+     관리자 - Container
+   DataSource에서 connection을 가지고 온다. 즉, 중간의 매개체임.
+   maxActive은 pull을 20 개 만들어 놓는다. 즉, 서버가 시작할 때 딱 한 번만 만들어 진다.
+   maxIdle는 접속자가 없을 때, 10 개는 죽여 놓는다. 쉬는 Resource는 Idle이라고 한다.
+   maxWait는 20 개를 다 사용했을 때, 더이상 사용하고자 하는 것이 없을 때 (누군가 반활할
+     때까지 기다린다)는 의미가 -1이다.
+   -->
+</Context>
